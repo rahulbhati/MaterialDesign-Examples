@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context="toolbar.androidstudio.simple.com.materialdesigntoolbar.MainActivity">
+
+<include layout="@layout/app_bar" android:id="@+id/toolbar"
+
+    ></include>
+
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
