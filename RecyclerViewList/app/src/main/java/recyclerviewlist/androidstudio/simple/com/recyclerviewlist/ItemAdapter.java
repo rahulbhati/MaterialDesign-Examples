@@ -45,13 +45,22 @@ List<Data> dataList= Collections.emptyList();
     public int getItemCount() {
         return dataList.size();
     }
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView titleTxt,descriptionTxt;
+
+        @Override
+        public void onClick(View v) {
+
+         dataList.remove(getPosition());
+            notifyItemRemoved(getPosition());
+
+        }
 
         public MyViewHolder(View itemView) {
             super(itemView);
             titleTxt=(TextView)itemView.findViewById(R.id.titleTxt);
             descriptionTxt=(TextView)itemView.findViewById(R.id.descriptionTxt);
+            descriptionTxt.setOnClickListener(this);
 
         }
     }
